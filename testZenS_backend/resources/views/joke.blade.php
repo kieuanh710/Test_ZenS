@@ -42,14 +42,17 @@
             </div>
         </nav>
         <div class="container">
+            <?php 
+                $counts= count($listJoke);
+                echo $counts;
+            ?>
             @foreach($listJoke as $key => $item)
-            @foreach($lastID as $key => $id)
             <div class="mySlides fade ">
                 <div class="card-container joke">
                     <div class="card ">
                         <div class="event_item">
                             <div class="grid wide">
-                                @if($item->id == $id)
+                                @if($item->id == $counts)
                                     <div style="   
                                     display: flex;
                                     justify-content: center;
@@ -77,7 +80,6 @@
                 </div>
 
             </div>
-            @endforeach
             @endforeach
             {{-- <a href="{{route('detail')}}" class="">check</a> --}}
         </div>

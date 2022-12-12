@@ -16,9 +16,8 @@ class JokeController extends Controller
     public function joke()
     {
         $listJoke = $this->jokes->getAll();
-        $lastID = $this->jokes->getId();
-        // dd($lastID);
-        return view('joke', compact('listJoke', 'lastID'));
+        
+        return view('joke', compact('listJoke'));
     }
     public function addFunny(Request $request, $id)
     {
