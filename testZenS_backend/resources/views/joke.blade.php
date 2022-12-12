@@ -44,7 +44,7 @@
         <div class="container">
             <?php 
                 $counts= count($listJoke);
-                echo $counts;
+                // echo $counts;
             ?>
             @foreach($listJoke as $key => $item)
             <div class="mySlides fade ">
@@ -52,7 +52,7 @@
                     <div class="card ">
                         <div class="event_item">
                             <div class="grid wide">
-                                @if($item->id == $counts)
+                                @if($key == $counts-1 )
                                     <div style="   
                                     display: flex;
                                     justify-content: center;

@@ -16,7 +16,6 @@ class JokeController extends Controller
     public function joke()
     {
         $listJoke = $this->jokes->getAll();
-        
         return view('joke', compact('listJoke'));
     }
     public function addFunny(Request $request, $id)
